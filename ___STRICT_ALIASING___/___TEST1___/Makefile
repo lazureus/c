@@ -1,6 +1,7 @@
 .PHONY: all clean
 
 CC := gcc
+OBJDUMP = objdump
 
 CCVERSION:=
 
@@ -28,11 +29,16 @@ EXECUTABLES = main
 
 MAKEFLAGS := -s
 
-all: clean $(EXECUTABLES) banner
+all: clean $(EXECUTABLES) banner postbuild
 
 clean:
 	rm -f $(EXECUTABLES)
-	rm -f *.dbo *.dla *.dnm *.exe *.map *.o
+	rm -f *.dbo *.dla *.dnm *.exe *.map *.o *.lst *.s
+
+postbuild:
+	$(OBJDUMP) -d -M intel -S main.o > main.lst
+	$(OBJDUMP) -d -M intel main.o > main.s
+
 
 banner:
 	@echo -------------------------------------------------------------------------------
