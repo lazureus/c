@@ -31,7 +31,7 @@ int main(void)
         .c = 8U,
     } ;
 
-    test(a,(Sample*)a,size) ;
+    test(a,&sample,size) ;
 
     printf("[%x][%x]\n",a[0],a[4]) ;
 
