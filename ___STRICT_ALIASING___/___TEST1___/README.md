@@ -2,7 +2,7 @@ SOURCE:
     http://cellperformance.beyond3d.com/articles/2006/06/understanding-strict-aliasing.html
 
 PURPOSE:
-    Test code checks is GCC or other compilers are able to through a warning when there
+    Test code checks is GCC or other compilers are able to throw a warning when there
     is strict-aliasing rule violation.
 
 CONCLUSION:
@@ -25,4 +25,4 @@ CONCLUSION:
 
     In the article it's written that more likely program won't work because it's violating
     strict-aliasing rule, which causes undefined behavior. I cannot confirm it because I didn't
-    found platform on which this code faild.
+    found platform on which this code failed.
