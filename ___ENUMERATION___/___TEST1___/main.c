@@ -26,23 +26,16 @@ typedef struct
     rgb_color_t rgb4 ;
 } MY_color_data_t ;
 
-void hello(rgb_color_t color) ;
-
-void hello(rgb_color_t color)
+static void hello(rgb_color_t color)
 {
-    printf("Hello world [%d] \n",color) ;
+    printf("Color[%d] \n",(int)color) ;
 }
 
 int main(void)
 {
-    MY_color_data_t a =
-    {
-        .rgb = 3
-    } ;
+    printf("Hello world\n") ;
 
     hello(4) ;
-
-    printf("1st[%d]\n 2nd[%d]\n3rd[%d]\n4th[%d]\n5th[%d]\n",a.color,a.rgb,a.rgb2,a.rgb3,a.rgb4) ;
 
     return 0;
 }
