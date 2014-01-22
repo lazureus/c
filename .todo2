@@ -1,0 +1,12 @@
+{
+  "title": "",
+  "tasks": [
+    {
+      "text": "Prove that ternary operator generates less efficient code than if else construct",
+      "priority": "high",
+      "creation": 1389395507,
+      "completion": 0,
+      "tasks": []
+    }
+  ]
+}
