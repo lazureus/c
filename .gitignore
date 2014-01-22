@@ -1,5 +1,6 @@
 *.out
 *.lst
 *.s
+*.swp
 *~
 tags
