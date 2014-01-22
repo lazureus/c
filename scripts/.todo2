@@ -5,7 +5,7 @@
       "text": "Make a script which will run 'make clean' command around all TEST dirs",
       "priority": "high",
       "creation": 1386857936,
-      "completion": 0,
+      "completion": 1390404227,
       "tasks": []
     }
   ]
