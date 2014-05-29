@@ -1,6 +1,4 @@
-SOURCE:
-
-    [ Efficient C language tips part 1] (http://embeddedgurus.com/stack-overflow/2008/06/efficient-c-tips-1-choosing-the-correct-integer-size/)
+SOURCE:[ Efficient C language tips part 1] (http://embeddedgurus.com/stack-overflow/2008/06/efficient-c-tips-1-choosing-the-correct-integer-size/)
 
 PURPOSE:
     Test aim is to prove that compiler will throw a warning about comparision to the value greater than
