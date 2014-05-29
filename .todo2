@@ -7,6 +7,27 @@
       "creation": 1389395507,
       "completion": 0,
       "tasks": []
+    },
+    {
+      "text": "INTEGER: read about the integer implicit conversions",
+      "priority": "high",
+      "creation": 1399477149,
+      "completion": 0,
+      "tasks": []
+    },
+    {
+      "text": "INITIALIZATION: add description to the test and help file",
+      "priority": "veryhigh",
+      "creation": 1399637615,
+      "completion": 0,
+      "tasks": []
+    },
+    {
+      "text": "XOR: get to know how operations are done when you xor bool and uint8_t",
+      "priority": "veryhigh",
+      "creation": 1399644181,
+      "completion": 0,
+      "tasks": []
     }
   ]
 }
