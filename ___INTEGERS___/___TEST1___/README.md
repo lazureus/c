@@ -1,31 +1,46 @@
-SOURCE:[ Efficient C language tips part 1] (http://embeddedgurus.com/stack-overflow/2008/06/efficient-c-tips-1-choosing-the-correct-integer-size/)
+SOURCE:
+=======
+
+[ Efficient C language tips part 1] (http://embeddedgurus.com/stack-overflow/2008/06/efficient-c-tips-1-choosing-the-correct-integer-size/)
 
 PURPOSE:
-    Test aim is to prove that compiler will throw a warning about comparision to the value greater than
-    type can hold.
+========
+
+Test checks if compiler warn about comparision to the value greater than type can hold.
 
 CONCLUSION:
+===========
 
-    GCC compiler:
+* _**GCC compiler:**_
 
-        Warning was thrown for case when there is always true comparision with e.g. 0 or other numerical value,define
-        , however it doesn't throw a warning if comparision is performed against some const variable or usual variable.
+    GCC thrown following warning when there was comparision to the const :
 
-    CLANG compiler:
+    >main.c:16:5: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+    >main.c:18:9: warning: comparison is always true due to limited range of data type [-Wtype-limits]
 
-        The same situation occurs for the CLANG compiler, warnings were thrown for a always true comparision.
+    However it doesn't throw a warning if comparision is performed against variables with/without const type qualifier.
 
-    GHS compiler:
+* _**CLANG compiler:**_
 
-        No warning.
+    CLANG thrown following warning when there was comparision to the const:
 
-    SPLINT:
+    >main.c:16:16: warning: comparison of constant 300 with expresion of type 'uint8_t' (aka 'unsigned char')
+    >is always true [-Wtautological-constant-out-of-range-compare]
+    >
+    >main.c:18:20: warning: comparison of constant 3000 with expresion of type 'uint_fast8_t' (aka 'unsigned char')
+    >is always true [-Wtautological-constant-out-of-range-compare]
 
-        No warning.
+    However it doesn't throw a warning if comparision is performed against variables with/without const type qualifier.
 
-    OCLINT:
+* _**GHS compiler:**_
 
-        There were two warnings saying that there is always true comparision :
+    No warning.
 
-            main.c|18 col 20 warning| comparison of constant 3000 with expression of type 'uint_fast8_t' 
-            (aka 'unsigned char') is always true [-Wtautological-constant-out-of-range-compare] [c/oclint]
+* _**SPLINT:**_
+
+    No warning.
+
+* _**OCLINT:**_
+
+    There were two warnings saying that there is always true comparision.
+
