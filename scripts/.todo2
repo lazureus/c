@@ -7,6 +7,20 @@
       "creation": 1386857936,
       "completion": 1390404227,
       "tasks": []
+    },
+    {
+      "text": "VIM:Add script for clearing all .swp files",
+      "priority": "high",
+      "creation": 1401489142,
+      "completion": 0,
+      "tasks": []
+    },
+    {
+      "text": "MAKE: add script for clean/all all directories",
+      "priority": "veryhigh",
+      "creation": 1401489186,
+      "completion": 0,
+      "tasks": []
     }
   ]
 }
