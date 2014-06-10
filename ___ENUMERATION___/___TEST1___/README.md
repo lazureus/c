@@ -1,21 +1,38 @@
 SOURCE:
+=======
 
-    Own idea
+My own idea.
 
 PURPOSE:
-    Test aim is to check will compiler throw a warning when we pass integer above the enum range which function
-    takes as arguments.
+========
+
+Test check if compiler warn about passing integer above the enum range to function.
 
 CONCLUSION:
+===========
 
-    GCC compiler throw no warning about passing int value above the enum defined range.
-    Clang compiler throw a following warning:
+* _**GCC compiler:**_
 
-        main.c:38:11: warning: integer constant not in range of enumerated type 'rgb_color_t' [-Wassign-enum]
+    No warning.
 
-    Additionally in test were used different static code analysis tools, one of them the splint throw a warning:
+* _**CLANG compiler:**_
 
-        main.c|38 col 11 warning| Function hello expects arg 1 to be rgb_color_t gets int: 4 [c/splint]
+    CLANG thrown following warning :
+
+    >main.c:38:11: warning: integer constant not in range of enumerated type 'rgb_color_t' [-Wassign-enum]
+
+* _**GHS compiler:**_
+
+    Not tested.
+
+* _**SPLINT:**_
+
+    SPLINT thrown following warning:
+
+    >main.c|38 col 11 warning| Function hello expects arg 1 to be rgb_color_t gets int: 4 [c/splint]
 
     However this warning was manifested against mismatched types passed to the function.
 
+* _**OCLINT:**_
+
+    Not tested.
