@@ -40,9 +40,9 @@ int main(void)
         .rgb = 4
     } ;
 
-    hello(a.rgb) ;
-
     printf("Hello world\n") ;
+
+    hello(a.rgb) ;
 
     return 0;
 }

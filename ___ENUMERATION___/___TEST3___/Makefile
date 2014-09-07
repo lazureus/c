@@ -1,6 +1,6 @@
 .PHONY: all clean
 
-CC := clang
+CC := gcc
 
 ifeq ($(CC),gcc)
     CFLAGS := -pipe
