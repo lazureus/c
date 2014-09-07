@@ -2,7 +2,7 @@
 #include <stdint.h>
 #include <stdbool.h>
 
-uint32_t swap_words(uint32_t arg)
+static uint32_t swap_words(uint32_t arg)
 {
     uint16_t* const sp = (uint16_t*) &arg ;
     uint16_t hi = sp[0] ;
