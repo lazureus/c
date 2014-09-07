@@ -18,9 +18,13 @@ ifneq (,$(findstring gcc,$(CC)))
     CFLAGS += -Wextra
     CFLAGS += -Wconversion
     CFLAGS += -Wmissing-field-initializers
-    CFLAGS += -Wstrict-aliasing=1
+    CFLAGS += -Wstrict-aliasing
     CFLAGS += -Winline
     CFLAGS += -ggdb
+ifeq ($(STRICT_ALIASING),no)
+    CFLAGS += -fno-strict-aliasing
+    ALIASING_SUFFIX = no-strict
+endif
 else
     CFLAGS += -Weverything
     CFLAGS += -Wextra
@@ -28,10 +32,6 @@ else
     CFLAGS += -std=c99
 endif
 
-ifeq ($(STRICT_ALIASING),no)
-    CFLAGS += -fno-strict-aliasing
-    ALIASING_SUFFIX = no-strict
-endif
 
 EXECUTABLES = main main_asm
 
