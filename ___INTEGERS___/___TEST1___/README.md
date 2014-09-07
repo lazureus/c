@@ -16,6 +16,7 @@ CONCLUSION:
     GCC thrown following warning when there was comparision to the const :
 
     >main.c:16:5: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+    >
     >main.c:18:9: warning: comparison is always true due to limited range of data type [-Wtype-limits]
 
     However it doesn't throw a warning if comparision is performed against variables with/without const type qualifier.
